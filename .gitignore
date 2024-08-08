@@ -1,3 +1,12 @@
+# Data / Document Files
+docs/
+cj/
+
+# System Files
+.DS_Store
+__MACOSX/
+.env
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
