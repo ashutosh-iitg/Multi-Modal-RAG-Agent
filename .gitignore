@@ -1,6 +1,7 @@
 # Data / Document Files
 docs/
 cj/
+.chainlit/
 
 # System Files
 .DS_Store
