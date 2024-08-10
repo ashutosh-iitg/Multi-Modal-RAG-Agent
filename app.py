@@ -10,7 +10,7 @@ from chainlit.types import AskFileResponse
 
 from multiModalRAG import *
 
-welcome_message = """Welcome to the Chainlit PDF QA demo! To get started:
+welcome_message = """Welcome to the Chainlit Multi-Modal QA demo! To get started:
 1. Upload upto 5 files of type PDF, text or image
 2. Ask a question about the file
 """
@@ -66,6 +66,7 @@ async def start():
             texts.extend(process_file(file))
 
     # Get text and table summaries
+    texts = texts[:10] # Limit to 5 documents for experimentation
     text_summaries, table_summaries = generate_text_summaries(texts, tables, summarize_texts=True)
 
     # Image summaries
@@ -117,3 +118,4 @@ async def main(message: cl.Message):
 # TODO: 
 # Add a way to get the relevant documents from the retriever
 # Add persistence in vectors
+# Add a way to detect companies from a query and retrieve vector from the store

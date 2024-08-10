@@ -2,6 +2,7 @@
 docs/
 cj/
 .chainlit/
+vector-store/
 
 # System Files
 .DS_Store
