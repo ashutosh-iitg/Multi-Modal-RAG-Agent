@@ -1,10 +1,12 @@
 # Multi-Modal RAG Agent for Financial Analysis
 
-This repository hosts a project that leverages cutting-edge AI technologies to create a Retrieval-Augmented Generation (RAG) agent. This agent uses Google Gemini models, Vertex AI embeddings, Vertex AI SDK, LangChain, and Chainlit to deliver sophisticated financial analysis and investment advice based on user queries and provided documents.
+This repository hosts a project that leverages LLMs to create a Multi-modal Retrieval-Augmented Generation (RAG) agent. This agent uses Google Gemini models, Vertex AI embeddings, Vertex AI SDK, LangChain, and Chainlit to deliver sophisticated financial analysis and investment advice based on user queries and provided documents.
 
 ## Overview
 
-The Multi-Modal RAG Agent is designed to function as a financial analyst, answering user queries with detailed investment advice. It combines multiple modalities and AI capabilities to interpret and analyze financial documents, images and tables, providing responses that are both informed and contextually relevant.
+The Multi-Modal RAG Agent is designed to function as a financial analyst, answering user queries with detailed investment advice. It combines multiple modalities and AI capabilities to interpret and analyze financial documents, containing texts, images and tables, providing responses that are both informed and contextually relevant.
+
+![Demo](assets/demo.png)
 
 ### Key Features
 
@@ -23,7 +25,7 @@ There are at least three ways to approach the problem, which utilize the multi-v
 
 1. Use multimodal embeddings (such as CLIP) to embed images and text together. Retrieve either using similarity search, but simply link to images in a docstore. Pass raw images and text chunks to a multimodal LLM for synthesis.
 
-2. Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images. Embed and retrieve text summaries using a text embedding model. And, again, reference raw text chunks or tables from a docstore for answer synthesis by a LLM; in this case, we exclude images from the docstore (e.g., because can't feasibility use a multi-modal LLM for synthesis).
+2. Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images. Embed and retrieve text summaries using a text embedding model. And, again, reference raw text chunks or tables from a docstore for answer synthesis by a LLM; in this case, we exclude images from the docstore (because it's not feasibile to use a multi-modal LLM for synthesis).
 
 3. Use a multimodal LLM (such as GPT4-V, LLaVA, or FUYU-8b) to produce text summaries from images. Embed and retrieve image summaries with a reference to the raw image, as we did above in option 1. And, again, pass raw images and text chunks to a multimodal LLM for answer synthesis. This option is sensible if we don't want to use multimodal embeddings.
 

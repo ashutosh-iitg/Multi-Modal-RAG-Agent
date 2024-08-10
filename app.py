@@ -66,7 +66,7 @@ async def start():
             texts.extend(process_file(file))
 
     # Get text and table summaries
-    texts = texts[:10] # Limit to 5 documents for experimentation
+    texts = texts[:5] # Limit to 5 pages for demo
     text_summaries, table_summaries = generate_text_summaries(texts, tables, summarize_texts=True)
 
     # Image summaries
