@@ -189,6 +189,15 @@ def create_multi_vector_retriever(
 
     # Helper function to add documents to the vectorstore and docstore
     def add_documents(retriever, doc_summaries, doc_contents):
+        """
+        Adds documents to the retriever's vectorstore and docstore.
+        Args:
+            retriever (Retriever): The retriever object.
+            doc_summaries (List[str]): List of document summaries.
+            doc_contents (List[str]): List of document contents.
+        Returns:
+            None
+        """
         doc_ids = [str(uuid.uuid4()) for _ in doc_contents]
         summary_docs = [
             Document(page_content=s, metadata={id_key: doc_ids[i]}) for i, s in enumerate(doc_summaries)
