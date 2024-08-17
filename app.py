@@ -119,3 +119,4 @@ async def main(message: cl.Message):
 # Add a way to get the relevant documents from the retriever
 # Add persistence in vectors
 # Add a way to detect companies from a query and retrieve vector from the store
+# CLiP embeddings
