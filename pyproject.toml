@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "multi-modal-rag-chatbot"
+version = "0.1.0"
+description = "A multi modal RAG agent using Vertex AI embeddings, Gemini models, LangChain and Chainlit."
+authors = ["ashutosh-iitg <ashutoshk167@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.9, <3.13"
+chainlit = "^1.1.402"
+chromadb = "^0.5.5"
+langchain = "^0.2.14"
+langchain-community = "^0.2.11"
+google-generativeai = "^0.7.2"
+google-auth = "^2.32.0"
+google-cloud-core = "^2.4.1"
+jupyterlab = "^4.2.4"
+langchain-chroma = "^0.1.2"
+langchain-google-vertexai = "^1.0.8"
+pillow = "^10.4.0"
+pypdf = "^4.3.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
